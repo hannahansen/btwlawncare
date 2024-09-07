@@ -16,7 +16,7 @@ body {
     justify-content: center;
     height: 100vh;
     background-color: #fff;
-    padding: 20px;
+    padding: 40px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -26,7 +26,7 @@ body {
 }
 
 .logo-section img {
-    max-width: 400px;
+    max-width: 500px;
 }
 
 .form-section {
@@ -35,8 +35,8 @@ body {
 }
 
 .form-section h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 36px;
+    margin-bottom: 30px;
     color: #333;
     font-family: 'Montserrat', sans-serif; /* Ensure h1 is using Montserrat */
     font-weight: 400;
@@ -48,11 +48,11 @@ form {
 }
 
 input {
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 10px;
+    font-size: 20px;
     background-color: #38793a;
     color: white;
     font-family: 'Montserrat', sans-serif; /* Ensure input text is Montserrat */
@@ -68,9 +68,9 @@ button {
     background-color: #ffffff;
     color: rgb(0, 0, 0);
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Montserrat', sans-serif;
 }
 
