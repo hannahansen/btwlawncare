@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bytheway Lawn Care</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-section">
+            <img src="images/logojpg.jpg" alt="Bytheway Lawn Care Logo">
+        </div>
+        <div class="form-section">
+            <h1>You’re on your way to a better summer.</h1>
+            <form id="inquiry-form">
+                <input type="text" id="first-name" name="firstName" placeholder="First name" required>
+                <input type="text" id="last-name" name="lastName" placeholder="Last name" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="tel" id="phone" name="phone" placeholder="Phone #" required>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("xYF3Hjt3At4WI65Mc");
+        })();
+
+        document.getElementById('inquiry-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.sendForm('andrewlawncare', 'template_d9177n7', this)
+            .then(function() {
+                alert('Inquiry successfully sent!');
+            }, function(error) {
+                alert('Failed to send the inquiry. Please try again later.');
+            });
+        });
+    </script>
+
+    <script src="index.js"></script>
+    
+</body>
+</html>
