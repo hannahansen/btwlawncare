@@ -58,6 +58,13 @@ input {
     font-family: 'Montserrat', sans-serif; /* Ensure input text is Montserrat */
 }
 
+input:focus {
+    outline: none;
+    background-color: #4caf50;
+    border-color: black;
+    color: white;
+}
+
 input::placeholder {
     color: white;
     font-family: 'Montserrat', sans-serif;
@@ -75,5 +82,16 @@ button {
 }
 
 button:hover {
-    background-color: #45a049b1;
+    background-color: #4caf4fc0;
+}
+
+/* Prevent autofill from changing the input background color */
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px #38793a inset !important;
+    -webkit-text-fill-color: white !important;
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 30px #38793a inset !important;
+    -webkit-text-fill-color: white !important;
 }

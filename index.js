@@ -8,9 +8,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('inquiry-form');
     const phoneInput = document.getElementById('phone');
 
-    // Phone number auto-format function
     phoneInput.addEventListener('input', function(e) {
-        let value = phoneInput.value.replace(/\D/g, ''); // Remove all non-digit characters
+        let value = phoneInput.value.replace(/\D/g, '');
         if (value.length > 3 && value.length <= 6) {
             value = value.replace(/^(\d{3})(\d{1,3})/, '$1-$2');
         } else if (value.length > 6) {
@@ -20,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     form.addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevent the form from submitting the traditional way
+        event.preventDefault();
 
         // Send the form data via EmailJS
         emailjs.sendForm('andrewlawncare', 'template_d9177n7', form)
